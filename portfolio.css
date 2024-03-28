@@ -57,12 +57,12 @@ header .check {
 
 
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     background: var(--black);
-    padding: .2rem 9%;
+    padding: 0 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,13 +97,18 @@ header .navigations a:hover{
     /* transform: rotate(360deg); */
 }
 
-#home img{
+/* #home img{
     position: relative;
     background-repeat: no-repeat;
     background:center center fixed;
     width: 100%;
     margin: 0;
     
+} */
+#home{
+    background-image:url( ./images/laptop2.jpg);
+    margin-bottom: 3px;
+    height: 85vh;
 }
 #home #hm{
     position:absolute;
