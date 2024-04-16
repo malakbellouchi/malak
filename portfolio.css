@@ -30,6 +30,9 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
+img{
+    display: block;
+}
 /* html{
     scroll-behavior: smooth;
 } */
@@ -84,20 +87,26 @@ header{
     font-size:70px;
     margin-bottom: 15px;
 }
-header .navigations a{
-    padding: 2rem; 
-    color: var(--white);
-    font-size: 20px;
-    
+.navigations{
+    display: flex;
+    gap: 40px;
 }
-
-header .navigations a:hover{
+.navigations a{ 
+    color: var(--white);
+    font-size: 20px;  
+}
+.navigations a:hover{
     color: var(--spink);
     cursor: pointer;
     /* transform: rotate(360deg); */
 }
-
-/* #home img{
+@media (width <= 800px) {
+    .navigations {
+        display:none;
+    }
+}
+    /* #home img{
+}
     position: relative;
     background-repeat: no-repeat;
     background:center center fixed;
@@ -106,7 +115,8 @@ header .navigations a:hover{
     
 } */
 #home{
-    background-image:url( ./images/laptop2.jpg);
+    background:url( ./images/laptop2.jpg) no-repeat;
+    background-size: cover;
     margin-bottom: 3px;
     height: 87vh;
 }
@@ -149,47 +159,76 @@ button {
 button {
     opacity:1;
 }
-#about{
+@media (width <= 500px){
+    #home{
+        background:url(./images/laptop2portrait.jpg) no-repeat;
+        background-size: cover;
+    }
+}
+/* @media(width >= 935px){
+    #home{
+        background-repeat: none;
+    }
+} */
+.about{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--black);
-    margin: 0px;
+    
 }
-.paragraph{
+.about__paragraph{
     color: var(--white);
-    margin: 5% 6% 7%;
+    padding: 0 50px;
     font-family: var(--ff-dancing);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
-.paragraph h3{
-    margin: 4% 3% 25%;
+.about__paragraph h3{
+    padding: 3px 30px;
     text-align: center;
     font-family: var(--ff-mont);
     color: var(--pink);
     font-size: 55px;
 }
-#para-ab{
+.about__paragraph__txt{
     display:flex;
     flex-direction: column;
 }
-
-#para-ab span{
+.about__paragraph__txt span{
     font-size: 48px;
     color: var(--spink); 
     text-align: center;
 }
-#para-ab p{
+.about__paragraph__txt p{
     font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.image{
+.about__image{
     width: 50%;
     background-color: var(--black);
-    position: relative; 
     /* box-shadow: 0 10px 30px 100px rgb(11, 11, 11) inset; */
 }
-.image img{
-    width: 90%;
-    margin-left: 10%;
+.about__image img{
+    width: 100%;
+}
+@media (width <= 768px){
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+    .about__paragraph{
+        padding: 0 2rem;
+        width: 100%;
+    }
+    .about__image {  
+        width: 100%;
+        order: -1;
+    }
 }
 #skills{
     background-color: var(--black);
@@ -209,9 +248,11 @@ button {
     font-family: var(--ff-mont);
     padding-bottom: 20px;
 }
-.arrow{
+.about__paragraph__arrow{
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     color: var(--spink);
     font-size: 20px;
     letter-spacing: 10px;
@@ -241,7 +282,7 @@ button {
 }
 
 #contact {
-    background-image: url(./images/contact2.jpg);
+    background-image: url(./images/contact.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
