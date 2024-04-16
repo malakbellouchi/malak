@@ -19,6 +19,7 @@
     --ff-dancing:'Dancing Script', cursive;
     --ff-roboto:'Roboto', sans-serif;
     --ff-mont:"Montserrat", sans-serif;
+    
 }
 * {
     margin: 0;
@@ -177,7 +178,7 @@ button {
     background-color: var(--black);
     
 }
-.about__paragraph{
+.content{
     color: var(--white);
     padding: 0 50px;
     font-family: var(--ff-dancing);
@@ -186,23 +187,23 @@ button {
     flex-direction: column;
     gap: 1.5rem;
 }
-.about__paragraph h3{
-    padding: 3px 30px;
+.content h3{
+    padding: 0 30px;
     text-align: center;
     font-family: var(--ff-mont);
     color: var(--pink);
     font-size: 55px;
 }
-.about__paragraph__txt{
+.content__txt{
     display:flex;
     flex-direction: column;
 }
-.about__paragraph__txt span{
+.content__txt span{
     font-size: 48px;
     color: var(--spink); 
     text-align: center;
 }
-.about__paragraph__txt p{
+.content__txt p{
     font-size: 19px;
     display: flex;
     justify-content: center;
@@ -221,7 +222,7 @@ button {
         display: flex;
         flex-direction: column;
     }
-    .about__paragraph{
+    .content{
         padding: 0 2rem;
         width: 100%;
     }
@@ -230,25 +231,22 @@ button {
         order: -1;
     }
 }
-#skills{
+.skills{
     background-color: var(--black);
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    gap: 70px;
-    padding: 15%;
-    margin-top: .2%;
     color: var(--white);
+    margin-top: 5px;
 }
-#skills h3{
+.skills h3{
     color: var(--pink);
     font-size: 55px;
     font-family: var(--ff-mont);
-    padding-bottom: 20px;
 }
-.about__paragraph__arrow{
+.arrow{
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -257,11 +255,11 @@ button {
     font-size: 20px;
     letter-spacing: 10px;
 }
-#skills p{
+.skills p{
     font-size: 28px;
     font-family: var(--ff-dancing);
 }
-.list{
+.skills__list{
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -269,7 +267,7 @@ button {
     font-size: 12px;
 
 }
-.list li{
+.skills__list li{
     background-color: var(--lsblue);
     display: flex;
     align-items: center;
@@ -280,7 +278,11 @@ button {
     height: 70px;
     font-size: 1.3em;
 }
-
+@media (width <= 500px){
+    .skills__list {
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+}
 #contact {
     background-image: url(./images/contact.jpg);
     background-position: center;
