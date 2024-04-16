@@ -240,6 +240,8 @@ button {
     flex-direction: column;
     color: var(--white);
     margin-top: 5px;
+    padding-bottom: 2rem;
+    width: 100%;
 }
 .skills h3{
     color: var(--pink);
@@ -298,8 +300,8 @@ button {
     align-items: center;
     flex-direction: column;
     padding: 10%;
-    gap: 100px;
-    
+    gap: 3rem;
+    text-align: center;
 }
 .contact h3{
     color: var(--pink);
@@ -307,21 +309,19 @@ button {
     font-family: var(--ff-mont);
     padding-bottom: 5%;
 }
-.ctc{
+.contact__links{
     font-size: 1.2rem;
-    position: relative;
-    width: 450px;
+    width: 50%;
     backdrop-filter: blur(25px);
     border: 4px solid var(--white);
     border-radius: 15px;
-    padding: 4em 2.5em ;
+    padding: 4em .5em ;
     background-color: hsl(180, 3%, 14%);
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
 }
-.ctc .some{
+.contact__links .contact__link{
     font-size: 1.1rem;
     border: 0.2rem solid hsla(12, 21%, 91%, 0.573);
     border-radius: 20em;
@@ -334,12 +334,17 @@ button {
     gap: 15px;
     
 }
-.ctc a{
+.contact__links a{
     color: var(--pink);
     animation: border 1.5s  infinite normal;
 }
-.ctc a:hover{
+.contact__links a:hover{
     color: var(--spink);
+}
+@media (max-width: 500px){
+    .contact__links{
+        width: 100%;
+    }
 }
 h3{
     animation: FadeIn 4s infinite;
